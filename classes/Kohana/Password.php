@@ -64,4 +64,15 @@ class Kohana_Password
 		return $this->_engine->HashPassword($password);
 	}
 
+	/**
+	 * Get a random password of n length
+	 *
+	 * @param {int} $n
+	 * @return {string}
+	 */
+	public function random ( $n = 8 )
+	{
+		return sha1($this->_engine->get_random_bytes($n));
+	}
+
 }
