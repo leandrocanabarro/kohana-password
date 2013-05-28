@@ -50,7 +50,7 @@ class Kohana_Password
 	 */
 	public function check ( $hash, $password )
 	{
-		return $this->_engine->CheckPassword($hash, $password);
+		return $this->_engine->CheckPassword($password, $hash);
 	}
 
 	/**
